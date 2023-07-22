@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Данный вебсайт не относится к Cloudflare -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>PixelNodes</title>
+      <style>
+     div {
+      margin-top: 1%; /* Отступ сверху */
+     }
+    </style>
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <meta name="robots" content="noindex, nofollow">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="{{url_for('static', filename='errors.css')}}" media="screen">
+      <script>
+(function(){if(document.addEventListener&&window.XMLHttpRequest&&JSON&&JSON.stringify){var e=function(a){var c=document.getElementById("error-feedback-survey"),d=document.getElementById("error-feedback-success"),b=new XMLHttpRequest;a={event:"feedback clicked",properties:{errorCode:1020,helpful:a,version:5}};b.open("POST","https://sparrow.cloudflare.com/api/v1/event");b.setRequestHeader("Content-Type","application/json");b.setRequestHeader("Sparrow-Source-Key","c771f0e4b54944bebf4261d44bd79a1e");
+b.send(JSON.stringify(a));c.classList.add("feedback-hidden");d.classList.remove("feedback-hidden")};document.addEventListener("DOMContentLoaded",function(){var a=document.getElementById("error-feedback"),c=document.getElementById("feedback-button-yes"),d=document.getElementById("feedback-button-no");"classList"in a&&(a.classList.remove("feedback-hidden"),c.addEventListener("click",function(){e(!0)}),d.addEventListener("click",function(){e(!1)}))})}})();
+</script>
+
+      <script>
+      (function(){function d(c){var b=document.getElementById("copy-label"),a=document.getElementById("cf-details-wrapper-expandable");c.target.checked?a.classList.add("expanded"):(a.classList.remove("expanded"),b.innerText="Click to copy")}if(document.addEventListener){var e=function(){var c=document.getElementById("copy-label");var b=document.getElementById("error-details").textContent;if(navigator.clipboard)navigator.clipboard.writeText(b);else{var a=document.createElement("textarea");a.value=b;a.style.top="0";a.style.left="0";a.style.position="fixed";document.body.appendChild(a);a.focus();a.select();document.execCommand("copy");document.body.removeChild(a)}c.innerText="Copied text to clipboard"};document.addEventListener("DOMContentLoaded",function(){var c=document.getElementById("error-details-checkbox"),b=document.getElementById("click-to-copy-btn");document.getElementById("copy-label").classList.remove("hidden");c.addEventListener("change",d);b.addEventListener("click",e)})}})();
+      </script>
+      <script defer="" src="{{url_for('static', filename='beacon.js')}}"></script>
+   </head>
+   <body>
+   <div class="cf-main-wrapper" role="main">
+      <div class="cf-header cf-section">
+         <div class="cf-error-title">
+            <h1>Добро пожаловать, {{uname}}.</h1>
+         </div>
+         <div class="cf-error-description">
+              <form action="/create" method="POST">
+                <button class="border border-solid bg-white cf-button cursor-pointer ml-4 px-4 py-2 rounded" id="sumbit" type="sumbit">Создать сервер</button>
+              </form>
+         <div class="cf-error-description">
+              <form action="/regen" method="POST">
+                <button class="border border-solid bg-white cf-button cursor-pointer ml-4 px-4 py-2 rounded" id="sumbit" type="sumbit">Регенерировать пароль</button>
+              </form>
+              <form action="{{panel}}" method="GET">
+                <button class="border border-solid bg-white cf-button cursor-pointer ml-4 px-4 py-2 rounded" id="sumbit" type="sumbit">Перейти в панель управления</button>
+              </form>
+         </div>
+         <div class="flex flex-row items-center gap-2 p-2 bg-slate-700 rounded-md shadow-md border-[1px] mb-2 border-slate-600 w-full lg:w-96"><p class="text-md font-bold">Данные от панели</p></div>
+         <div class="flex flex-row items-center gap-2 p-2 bg-slate-700 rounded-md shadow-md border-[1px] mb-2 border-slate-600 w-full lg:w-96"><p class="text-md font-bold">Почта:</p> <code class="text-md">{{email}}</code></div>
+         <div class="flex flex-row items-center gap-2 p-2 bg-slate-700 rounded-md shadow-md border-[1px] mb-2 border-slate-600 w-full lg:w-96"><p class="text-md font-bold">Пароль:</p> <code class="text-md">Скрыто </code></div>
+         </div>
+      </div>
+   </div>
+</body></html>

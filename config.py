@@ -1,0 +1,11 @@
+clienturl = "https://client.domain.com" # Адрес клиент панели
+discordid = 123456789  # ID приложения авторизации в DISCORD
+discordsecret = "SECRET" # CLIENT SECRET приложения авторизации в DISCORD
+secretkey = "NAPISHITE_SUDA_CHTO_NIBUD" # Секретный ключ чего-то там (сам не знаю, можете не менять)
+panelipaddress = "http://0.0.0.0" # Цифровой IP адрес панели (если на домене нету ANTIDDOS можно и домен)
+panelkey = "KEY" # Ключ PTERODACTYL Application API 
+paneluseraddress = "https://panel.domain.com" # Адрес панели для кнопки "Панель управления"
+neetsid = 1 # ID NEETS в PTEORDACTYL
+eggid = 1 # ID EGG в PTEORDACTYL
+nodeids = 1, 2, 3 # ID Узлов в PTERODACTYL
+clientport = 8888 # Порт клиент панели
