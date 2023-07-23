@@ -1,5 +1,7 @@
 # MWCLIENT - простая клиент панель для Pterodactyl
 
+### Внимание! Дизайн клиент панели сделан на основе CloudFlare
+
 ## Установка
 
 Скачайте [яйцо для Python от ParkerVCP](https://github.com/parkervcp/eggs/blob/master/generic/python) и установите его. Создайте сервер с этим яйцом, минимальные характеристики: 256 MB озу, 20% ЦП, 1024 MB диска.
